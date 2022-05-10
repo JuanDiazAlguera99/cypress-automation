@@ -1,12 +1,6 @@
 describe('Buy Page', () => {
     it('successfully login and buy', () => {
-      cy.visit('/')
-      cy.wait(500)
-      cy.get('[data-test="username"]').type('standard_user')
-      cy.wait(500)
-      cy.get('[data-test="password"]').type('secret_sauce')
-      cy.wait(500)
-      cy.get('[data-test="login-button"]').click()
+      cy.login()
       cy.wait(500)
       cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
       cy.wait(500)
