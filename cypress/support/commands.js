@@ -5,4 +5,14 @@ Cypress.Commands.add('login', (standard_user, secret_sauce)  => {
     cy.get('[data-test="login-button"]').click()
 })
 
+Cypress.Commands.add('Badlogin', (problem_user, secret)  => { 
+    cy.visit('/')
+    cy.wait(400)
+    cy.get('[data-test="username"]').type('problem_user')
+    cy.wait(400)
+    cy.wait(400)
+    cy.get('[data-test="password"]').type('secret')
+    cy.wait(400)
+    cy.get('[data-test="login-button"]').click()
+})
  
